@@ -1,0 +1,289 @@
+@charset "UTF-8"
+
+@import "variables"
+@import "mixins"
+@import "core"
+@import "fonts"
+
+.header
+    border-bottom: 1px solid $primary
+    padding-bottom: 45px
+
+.header_wrap
+    display: flex
+    justify-content: start
+    margin-top: 27px
+    
+    .header-logo
+        list-style: none
+        width: 170px
+
+    .header-logo_text            
+        font-size: 10px   
+        text-transform: uppercase
+        line-height: 1.2
+        text-align: right
+        color: #adb0b6  
+
+.header-phone_wrap
+    display: flex
+    flex-direction: column
+    
+    .header-phone_list
+        display: flex        
+        list-style: none
+        max-width: 415px
+
+        .heder-phone_item
+            padding-left: 57px
+            padding-right: 43px
+            .header-phone_link
+                text-decoration: none
+
+        .phone_left
+            border-right: 1px solid #adb0b6
+
+        .phone_right
+            padding-left: 45px
+            padding-right: 29px
+
+        .header-phone_item
+            color: $second
+
+.header-callBack_wrap
+    margin-top: 19px
+    padding-right: 29px
+    text-align: right
+    .header-callBack_link
+         color: $primary
+
+    
+.header-login-email_list
+    list-style: none
+.header-login-email
+    list-style: none
+    padding-left: 30px
+    .button-login
+        padding: 18px 63px 18px 111px
+        position: relative
+        .button-login_text           
+            &:before
+                content: ''
+                width: 23px
+                height: 28px                
+                background: url('../img/sign_in.png') center no-repeat
+                background-size: cover
+                position: absolute
+                left: 62px
+                top: 11px
+    .sign-in_item, .mail_item
+        margin-top: 19px
+        .sign-in_link, .mail_link
+            color: $primary
+    .mail_item
+        font-size: 18px
+        padding-left: 40px
+        position: relative
+        &:before
+            content: ''
+            width: 31px
+            height: 22px           
+            background: url('../img/mail.png') center no-repeat
+            background-size: cover
+            position: absolute
+            left: 0
+            top: 0
+     
+           
+            
+ 
+.header-card_wrap
+    display: flex
+    margin-left: 59px
+    .header-item_card
+        list-style: none
+        .buton-card
+            width: 45px
+            height: 47px
+    .item_card--text
+        margin-left: 10px
+/// MENU///
+.header-menu_list
+    display: flex    
+    justify-content: space-between  
+    align-content: space-between  
+    list-style: none
+    margin-top: 30px
+
+    .header-menu_item
+        
+
+    .header-menu_link
+        color: $second
+        text-decoration: none
+        font-size: 18px
+        line-height: 1.2
+        &:hover
+            color: $primary
+//////  HEADER SEARCH/////////
+.header-search
+    margin-top: 30px
+    background-color: #f8f8f8
+    .header-search_wrap
+        padding-top: 8px
+        padding-bottom: 8px
+.header-search_items
+    display: flex
+    list-style: none
+    
+    .search
+       width: 897px
+       padding: 16px 20px 16px 40px
+       font-style: italic
+    .button-search
+        padding: 18px 15px 18px 47px
+        position: relative
+        margin-left: 18px
+        .button-search_text
+            &:before
+                content: ''
+                width: 21px
+                height: 21px               
+                background: url('../img/search.png') center no-repeat
+                background-size: cover
+                position: absolute
+                left: 15px
+                top: 12px
+    .search_item_link
+        align-self: center
+        margin-left: 15px
+        .advanced-search_link
+            color: $primary
+            text-decoration: none
+            &:hover
+                color: $second
+@media (max-width: 1024px )
+    .header-phone
+        margin-left: 20px
+    .header-phone_wrap
+        font-size: 12px
+    .header-phone_wrap .header-phone_list .heder-phone_item
+        padding-left: 10px
+        padding-right: 20px   
+    .header-callBack_link
+        font-size: 12px
+    .header-card_wrap
+        margin-left: 10px  
+    .header-menu_list .header-menu_link
+        font-size: 14px
+    .header-search_items .search
+        width: 700px
+    
+@media (max-width: 768px )
+    .header-phone
+        margin-left: 5px
+    .header-phone_wrap
+        font-size: 12px
+        min-width: 220px
+    .header-phone_wrap .header-phone_list .heder-phone_item
+        padding-left: 5px
+        padding-right: 5px   
+    .header-callBack_link
+        font-size: 10px
+    .header-login-email
+        padding-left: 10px
+    .header-login-email .button-login
+        padding: 18px 8px 18px 40px
+    .button-login_text
+        font-size: 10px
+    .header-login-email .button-login .button-login_text:before
+        left: 10px
+    .header-login-email .sign-in_item .sign-in_link
+        font-size: 12px    
+    .header-login-email .mail_item .mail_link
+        font-size: 12px
+    .item_card-info
+        font-size: 10px
+   
+    .header-card_wrap
+        margin-left: 10px  
+    .header-menu_list .header-menu_link
+        font-size: 12px
+    .header-search_items .search
+        width: 465px
+
+@media (max-width: 414px )
+    .header-phone
+        margin: 0 auto
+    .header_wrap
+        display: flex
+        flex-direction: column        
+    .header_wrap .header-logo
+        width: 414px
+        text-align: center        
+    .header_wrap .header-logo_text
+        text-align: center
+    .header-phone_wrap .header-phone .heder-phone_item
+       margin:  0 auto
+       font-size: 12px
+    .header-phone_wrap .header-phone .phone_left
+        padding-right: 60px
+    .header-login-email
+        margin-top: 20px
+    .header-login-email .button-login 
+        padding: 18px 36px 18px 111px
+    .header-callBack_wrap, .header-login-email
+        text-align: center
+        padding-left: 0px
+        padding-right: 0px
+    .header-login-email .sign-in_item, .header-login-email .mail_item
+        margin-top: 10px
+        font-size: 12px
+    .header-login-email .mail_item:before
+        left: 114px
+    .header-card_wrap
+        margin-top: 20px
+        margin-left: 0px
+        justify-content: center
+    .header-card_wrap .item_card--text
+        margin-left: 30px
+    .header-search_items
+        flex-direction: column
+
+    .header-search_items .search
+       width: 260px
+       padding: 16px 20px 16px 40px
+       font-size: 9px
+       font-style: italic
+    .header-menu_list
+       flex-wrap: wrap
+    .header-menu_item
+        margin-top: 10px
+    .header-search_items .search_item_link
+        margin-top: 20px
+        align-self: start
+    
+
+
+    
+        
+
+
+
+        
+
+    
+               
+
+
+
+
+
+
+
+    
+
+    
+    
+            
+
